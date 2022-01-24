@@ -9,7 +9,7 @@ public class ApiJson {
 
 	public static void main(String[] args) {
 
-		// 버퍼 이용 : BufferdReader -> 버퍼를 이용해서 읽고 쓰는 함수
+		// 버퍼 이용 : BufferedReader -> 버퍼를 이용해서 읽고 쓰는 함수
 		// 버퍼(Buffer) : 입출력 속도 향상을 위해서 데이터를 일시적으로 메모리 영역의 한 곳에 모아두는 것
 		// 버퍼 장점 : 버퍼를 이용하기 때문에 입출력 관련 처리작업을 매우 빠르게 할 수 있다.
 		BufferedReader br = null;
