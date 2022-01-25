@@ -2,16 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>공공 데이터 API</title>
-  <script src="json.js"></script>
+  <title>Exam 001</title>
+  <!--제이쿼리-->
+  <!--이렇게 하면 항상 최신버전-->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!--특정 버전 사용-->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
+  <!--부트스트랩-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <button id="btn">클릭하세요! &nbsp; ㅇㅇ도서 이벤트의 댓글 참가자와 당첨자를 볼 수 있습니다.</button>
-  
-  <br><br>
-  <div id="bookList"></div>
-
-  <br><br>
-  <div id="bookListWinner" style="font-weight: bold; color: red;"></div>
+  <div class="container">
+    <div class="table-responsive">
+      <h4 style="text-align: center; padding-top: 50px;">JSON data to WebPage table with getJSON method</h4>
+      <br>
+      <table id="member_table" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Job</th>
+            <th>Hobby</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="json.js"></script>
 </body>
 </html>

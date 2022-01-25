@@ -1,0 +1,65 @@
+[
+  {
+    "id":1,
+    "name":"홍길동",
+    "age":20,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Male",
+    "job":"Programmer",
+    "hobby":"영화보기"
+  },
+  {
+    "id":2,
+    "name":"이순신",
+    "age":30,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Male",
+    "job":"WebDisigner",
+    "hobby":"음악감상"
+  },
+  {
+    "id":3,
+    "name":"강감찬",
+    "age":40,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Male",
+    "job":"Manager",
+    "hobby":"운동하기"
+  },
+  {
+    "id":4,
+    "name":"을지문덕",
+    "age":50,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Female",
+    "job":"Lecturer",
+    "hobby":"요리하기"
+  },
+  {
+    "id":5,
+    "name":"신사임당",
+    "age":45,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Female",
+    "job":"Lecturer",
+    "hobby":"요리하기"
+  },
+  {
+    "id":6,
+    "name":"유관순",
+    "age":35,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Female",
+    "job":"Lecturer",
+    "hobby":"요리하기"
+  },
+  {
+    "id":7,
+    "name":"김유신",
+    "age":60,
+    "address":"서울시 서초구 양재동 ㅇㅇ물산 123-456 양재로111",
+    "gender":"Male",
+    "job":"Editor",
+    "hobby":"수영하기"
+  }
+]
