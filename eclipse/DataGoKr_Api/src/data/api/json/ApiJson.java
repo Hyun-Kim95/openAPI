@@ -9,34 +9,34 @@ public class ApiJson {
 
 	public static void main(String[] args) {
 
-		// ¹öÆÛ ÀÌ¿ë : BufferedReader -> ¹öÆÛ¸¦ ÀÌ¿ëÇØ¼­ ÀĞ°í ¾²´Â ÇÔ¼ö
-		// ¹öÆÛ(Buffer) : ÀÔÃâ·Â ¼Óµµ Çâ»óÀ» À§ÇØ¼­ µ¥ÀÌÅÍ¸¦ ÀÏ½ÃÀûÀ¸·Î ¸Ş¸ğ¸® ¿µ¿ªÀÇ ÇÑ °÷¿¡ ¸ğ¾ÆµÎ´Â °Í
-		// ¹öÆÛ ÀåÁ¡ : ¹öÆÛ¸¦ ÀÌ¿ëÇÏ±â ¶§¹®¿¡ ÀÔÃâ·Â °ü·Ã Ã³¸®ÀÛ¾÷À» ¸Å¿ì ºü¸£°Ô ÇÒ ¼ö ÀÖ´Ù.
+		// ë²„í¼ ì´ìš© : BufferedReader -> ë²„í¼ë¥¼ ì´ìš©í•´ì„œ ì½ê³  ì“°ëŠ” í•¨ìˆ˜
+		// ë²„í¼(Buffer) : ì…ì¶œë ¥ ì†ë„ í–¥ìƒì„ ìœ„í•´ì„œ ë°ì´í„°ë¥¼ ì¼ì‹œì ìœ¼ë¡œ ë©”ëª¨ë¦¬ ì˜ì—­ì˜ í•œ ê³³ì— ëª¨ì•„ë‘ëŠ” ê²ƒ
+		// ë²„í¼ ì¥ì  : ë²„í¼ë¥¼ ì´ìš©í•˜ê¸° ë•Œë¬¸ì— ì…ì¶œë ¥ ê´€ë ¨ ì²˜ë¦¬ì‘ì—…ì„ ë§¤ìš° ë¹ ë¥´ê²Œ í•  ìˆ˜ ìˆë‹¤.
 		BufferedReader br = null;
 		try {
-			// °ø°øAPI ÀÎÁõÅ° ¹× ÀüÃ¼ Ç® ÁÖ¼Ò
-			// º¯¼ö¿¡ ¿©·¯ °ªÀ» ³Ö¾î¼­ ÁÖ¼Ò Ã¼°è¸¦ ¸¸µé¾î¾ß ÇÑ´Ù¸é -> StringBuilder¸¦ »ç¿ë
-			// String: ºÒº¯(immutable)¼ºÀ» °¡Áö¹Ç·Î ¹®ÀÚ¿­À» ´õÇÒ ¶§ ¸Å¹ø »õ·Î¿î °´Ã¼¸¦ »ı¼ºÇØ¼­ ÂüÁ¶ÇÏ´Â ¹æ½Ä -> °ª º¯°æ X
-			// StringBuilder : ¹®ÀÚ¿­À» ´õÇØ ³ª°¥ ¶§ »õ·Î¿î °´Ã¼¸¦ ¸Å¹ø »ı¼ºÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó ±âÁ¸ µ¥ÀÌÅÍ °ª¿¡ Ãß°¡ÇØ°¡´Â ¹æ½Ä, ¼Óµµ°¡ ºü¸§
-			//				 : mutable ¼Ó¼º, append(), insert(), delete() µîÀ» »ç¿ëÇØ¼­ °ªÀ» º¯°æ
-			// º¸Åë °ø°øAPI ¹æ½Ä -> StringBuilder »ç¿ë
+			// ê³µê³µAPI ì¸ì¦í‚¤ ë° ì „ì²´ í’€ ì£¼ì†Œ
+			// ë³€ìˆ˜ì— ì—¬ëŸ¬ ê°’ì„ ë„£ì–´ì„œ ì£¼ì†Œ ì²´ê³„ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤ë©´ -> StringBuilderë¥¼ ì‚¬ìš©
+			// String: ë¶ˆë³€(immutable)ì„±ì„ ê°€ì§€ë¯€ë¡œ ë¬¸ìì—´ì„ ë”í•  ë•Œ ë§¤ë²ˆ ìƒˆë¡œìš´ ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ì°¸ì¡°í•˜ëŠ” ë°©ì‹ -> ê°’ ë³€ê²½ X
+			// StringBuilder : ë¬¸ìì—´ì„ ë”í•´ ë‚˜ê°ˆ ë•Œ ìƒˆë¡œìš´ ê°ì²´ë¥¼ ë§¤ë²ˆ ìƒì„±í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ ê¸°ì¡´ ë°ì´í„° ê°’ì— ì¶”ê°€í•´ê°€ëŠ” ë°©ì‹, ì†ë„ê°€ ë¹ ë¦„
+			//				 : mutable ì†ì„±, append(), insert(), delete() ë“±ì„ ì‚¬ìš©í•´ì„œ ê°’ì„ ë³€ê²½
+			// ë³´í†µ ê³µê³µAPI ë°©ì‹ -> StringBuilder ì‚¬ìš©
 			String urlStr = "http://apis.data.go.kr/B552061/jaywalking/getRestJaywalking?serviceKey=Uj7JHVlaJcD5DBtPQECFGH6tf1vBmpRshO6aEpIULQ7qrQ%2FCZiiycs6W6O1AV9pRmCPCiNBrc5SjUQAzqAVjeQ%3D%3D&searchYearCd=2017&siDo=11&guGun=680&type=json&numOfRows=10&pageNo=1";
 			
-			// URL Å¬·¡½º·Î °´Ã¼ »ı¼º -> 2°¡Áö ¹æ¹ı: Àı´ë°æ·Î, »ó´ë°æ·Î
+			// URL í´ë˜ìŠ¤ë¡œ ê°ì²´ ìƒì„± -> 2ê°€ì§€ ë°©ë²•: ì ˆëŒ€ê²½ë¡œ, ìƒëŒ€ê²½ë¡œ
 			URL url = new URL(urlStr);
 			
-			// openConnection() ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ¿¬°á
-			// URL ÁÖ¼ÒÀÇ ¿ø°İ °´Ã¼¿¡ Á¢¼ÓÇÑ µÚ -> Åë½ÅÇÒ ¼ö ÀÖ´Â URLConnection °´Ã¼ ¸®ÅÏ
+			// openConnection() ë©”ì„œë“œë¥¼ ì´ìš©í•œ ì—°ê²°
+			// URL ì£¼ì†Œì˜ ì›ê²© ê°ì²´ì— ì ‘ì†í•œ ë’¤ -> í†µì‹ í•  ìˆ˜ ìˆëŠ” URLConnection ê°ì²´ ë¦¬í„´
 			HttpURLConnection urlConn = (HttpURLConnection)url.openConnection();
 			urlConn.setRequestMethod("GET");
 			urlConn.setRequestProperty("Content-type", "application/json");
-			System.out.println("Response code : " + urlConn.getResponseCode()); // 200ÀÌ ³ª¿Í¾ß Á¤»ó
+			System.out.println("Response code : " + urlConn.getResponseCode()); // 200ì´ ë‚˜ì™€ì•¼ ì •ìƒ
 			
-			// InputStreamReader Å¬·¡½º·Î ÀĞ±â
-			// BufferedReader ´Â InputStreamReaderÀÇ °´Ã¼¸¦ ÀÔ·Â°ªÀ¸·Î »ç¿ë
+			// InputStreamReader í´ë˜ìŠ¤ë¡œ ì½ê¸°
+			// BufferedReader ëŠ” InputStreamReaderì˜ ê°ì²´ë¥¼ ì…ë ¥ê°’ìœ¼ë¡œ ì‚¬ìš©
 			br = new BufferedReader(new InputStreamReader(urlConn.getInputStream(), "UTF-8"));
 			
-			// °á°ú º¯¼ö
+			// ê²°ê³¼ ë³€ìˆ˜
 			/*
 			String rst = "";
 			String line;
@@ -53,7 +53,7 @@ public class ApiJson {
 			}
 			System.out.println(sb.toString());
 			
-			// ¿¬°á ÇØÁ¦
+			// ì—°ê²° í•´ì œ
 			br.close();
 			urlConn.disconnect();
 		}
