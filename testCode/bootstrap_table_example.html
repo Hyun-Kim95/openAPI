@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Table Example</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <!--
+    1. 컨테이너 없이 테이블만 작성하면 너비가 100% 꽉 참
+    2. 테이블 외곽에 div 쓰고, div의 class=container,
+     테이블의 class=table 적용하면 양쪽에 적절한 마진 생김
+    3. table-bordered : 경계선이 보임
+    4. table-striped : 격자로 색깔이 들어감
+    5. table-dark, table-light : 테이블을 어둡게, 밝게
+    6. thead에만 다크 적용도 가능 : thead의 class=thead-dark, light도 가능
+    7. text-center : 가운데정렬, thead나 td 하나에만도 적용 가능
+    8. colspan 사용도 가능
+    9. 색깔변경 : bg-warning, table-info, bg-success, table-danger 등 많음
+    10. table-hover : 마우스 올렸을 때 색변경됨
+    11. table-sm : small로써 컴팩트하고 피트하게 맞춰줌, 폰트 사이즈도 고려
+    12. <caption>List of members</caption> : 설명문
+  -->
+</head>
+<body>
+  <div class="container">
+    <!-- <h1 class="display-4">Bootstrap Table Example</h1> -->
+    <h3 style="text-align: center; padding-top: 50px">
+      Bootstrap Table Example
+      <small class="text-muted">with faded secondary text</small>
+    </h3>
+    <table class="table table-bordered table-striped table-dark table-sm table-hover">
+      <caption>Free member list of members</caption>
+      <thead class="thead-light text-center">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Gender</th>
+          <th>Job</th>
+          <th>Hobby</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>홍길동</td>
+          <td>22</td>
+          <td>서울시 서초구 양재동 ㅇㅇ물산</td>
+          <td>Male</td>
+          <td>Programmer</td>
+          <td>영화보기</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>강감찬</td>
+          <td>33</td>
+          <td>서울시 서초구 양재동 XX물산</td>
+          <td>Female</td>
+          <td>Designer</td>
+          <td>운동하기</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>을지문덕</td>
+          <td>44</td>
+          <td>서울시 서초구 양재동 OO물산</td>
+          <td>Male</td>
+          <td>Manager</td>
+          <td>음악감상</td>
+        </tr>
+        <tr class="bg-success">
+          <td colspan=6>최종통계</td>
+          <td>100명</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
